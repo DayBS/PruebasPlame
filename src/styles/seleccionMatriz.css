@@ -1,0 +1,37 @@
+.Atras-button {
+    margin: 10px;
+    padding: 12px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: rgb(255, 222, 75);
+    margin-bottom: 40px;
+    color: #000000;
+    margin-right: 40px;
+    border-color: rgb(255, 222, 75);
+  }
+  .dropdown-container {
+    margin-top: 20px;
+  }
+  
+  /* Estilos de los selects */
+  .select {
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 25px;
+    
+  }
+  
+  /* Estilos de los botones */
+  .button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  
+ 

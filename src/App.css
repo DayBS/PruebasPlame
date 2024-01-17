@@ -1,0 +1,84 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;}
+
+.App {
+  text-align: center;
+  background: #F4F4F4;
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+.App-logo {
+  height: 125px;
+  pointer-events: none;
+  size: 25px;
+  float: center;
+  margin-right:10px ;
+}
+
+.App-header {
+  background-color: #F4F4F4;
+  padding: 20px;
+  color: black;
+  text-align: center;
+  width: 100%;
+  max-width: 640px; 
+  box-sizing: border-box;
+  margin-left: 100px;
+}
+
+.App-button {
+  margin: 10px;
+  padding: 12px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #DB3A34;
+  margin-bottom: 40px;
+  color: #ffffff;
+  margin-right: 40px;
+  border-color: #DB3A34;
+}
+.AppWithBackground {
+  background: #F4F4F4; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+}
+.cuadrosTexto{
+  border-radius: 15px;
+  background-color: #B0BDC7;
+  padding: 15px;
+  width: 400px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+
+}
+.App-title{
+  background-color: #6D869A;
+  border-radius: 18px;
+  padding: 16px;
+  width: 550px;
+  display: inline-block;
+  margin-bottom: 40px;
+  color: #ffffff;
+
+}
+.cuadrosContacto{
+  border-radius: 15px;
+  background-color: #ffffff;
+  padding: 15px;
+  width: 400px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
