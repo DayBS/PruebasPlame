@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { HashRouter  as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
-import './App.css?inline"'
+import './App.css'
 import logo from './logo.png';
-
 import SeleccionMatriz from '@components/seleccionMatriz';
 import VerMatrices from '@components/verMatrices';
 import Tabla from '@components/tabla';
