@@ -130,6 +130,7 @@ useEffect(() => {
       <h2>{infoLocal.facultad}</h2>
       <h2>{infoLocal.carrera}</h2>
       <h2>{infoLocal.area}</h2>
+      <button className="App-button" onClick={setLocalStorage}>Confirmar</button>
 
       <table>
         <thead>
@@ -573,7 +574,6 @@ useEffect(() => {
         </tbody>
       </table>
 
-        <button className="App-button" onClick={setLocalStorage}>Confirmar</button>
 
 
     </div>

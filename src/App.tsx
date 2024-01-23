@@ -6,6 +6,7 @@ import SeleccionMatriz from '@components/seleccionMatriz';
 import VerMatrices from '@components/verMatrices';
 import Tabla from '@components/tabla';
 import InicioSesion from '@components/inicioSesion';
+import TablaArcusur from '@components/tablaArcusur';
 
 function App() {
   const [mostrarContenidoPrincipal, setMostrarContenidoPrincipal] = useState(true);
@@ -87,6 +88,16 @@ function App() {
                     onToggle={() => setMostrarContenidoPrincipal(false)}
                     onLogin={handleLogin}
                   />
+                }
+                />
+                  <Route
+                path="/tablaArcusur"
+                element={
+                  <TablaArcusur
+                    onToggle={() => setMostrarContenidoPrincipal(false)}
+                    onLogin={handleLogin}
+                  />
+                
                 }
               />
             </Routes>
