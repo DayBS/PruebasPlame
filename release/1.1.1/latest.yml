@@ -1,0 +1,8 @@
+version: 1.1.1
+files:
+  - url: YourAppName-Windows-1.1.1-Setup.exe
+    sha512: GQO4oIXD/fJsnJ+LhuOa4n/gBXyxU8XXGpwFbyC0Yce6cjHyAgSzfO4L3ZvAWTGqTunAJfg/eGqTzuCGwzg+rg==
+    size: 62036211
+path: YourAppName-Windows-1.1.1-Setup.exe
+sha512: GQO4oIXD/fJsnJ+LhuOa4n/gBXyxU8XXGpwFbyC0Yce6cjHyAgSzfO4L3ZvAWTGqTunAJfg/eGqTzuCGwzg+rg==
+releaseDate: '2024-01-25T15:42:54.581Z'

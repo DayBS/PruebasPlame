@@ -14,6 +14,8 @@ dist-electron
 *.local
 release/1.0.0/win-unpacked
 release/1.1.0/win-unpacked
+release/1.1.1/win-unpacked
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

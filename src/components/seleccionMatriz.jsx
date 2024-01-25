@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate   } from 'react-router-dom';
 
 const DropdownsDinamicos = () => {
+
+  const navigate = useNavigate();
+
   const opcionesFacultades = ['Facultad Politécnica del Alto', 'Facultad de Ciencias Sociales', 'Facultad de Odontologia', 'Facultad de Medicina', 
                               'Facultad de Humanidades y Ciencias de la Educación' , 'Facultad de Ciencias y Tecnología', 'Facultad de Ciencias Jurídicas y Políticas', 
                               'Facultad de Ciencias Economicas', 'Facultad de Ciencias Agrícolas, Pecuarias y Forestales', 'Facultad de Ciencias Veterinarias'
@@ -70,9 +73,16 @@ const DropdownsDinamicos = () => {
       };
 
       localStorage.setItem('seleccion', JSON.stringify(seleccion));
-    } else {
+
+      if (seleccionArea === 'CEUB') {
+        console.log('Navigating to tabla');
+        navigate('/tabla');
+      } else if (seleccionArea === 'ARCU-SUR') {
+        console.log('Navigating to tablaArcusur');
+        navigate('/tablaArcusur');
+      } else {
       console.log('Por favor, complete todas las selecciones.');
-    }
+    }}
   };
 
   return (
@@ -125,9 +135,13 @@ const DropdownsDinamicos = () => {
 <Link to="/">
       <button className="Atras-button">Atras</button>
     </Link>
-<Link to="/tabla">
-      <button className="App-button" onClick={setLocalStorage} disabled={!isBotonHabilitado}>Llenar</button>
-    </Link>
+    <button
+  className="App-button"
+  onClick={setLocalStorage}
+  disabled={!isBotonHabilitado}
+>
+  Llenar
+</button>
 <br></br>
     </div>
   );
