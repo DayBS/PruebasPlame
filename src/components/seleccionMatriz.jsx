@@ -75,11 +75,11 @@ const DropdownsDinamicos = () => {
       localStorage.setItem('seleccion', JSON.stringify(seleccion));
 
       if (seleccionArea === 'CEUB') {
-        console.log('Navigating to tabla');
         navigate('/tabla');
+
       } else if (seleccionArea === 'ARCU-SUR') {
-        console.log('Navigating to tablaArcusur');
         navigate('/tablaArcusur');
+        
       } else {
       console.log('Por favor, complete todas las selecciones.');
     }}
