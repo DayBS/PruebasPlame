@@ -28,12 +28,9 @@ const Tabla = () => {
     newDinamicos[dim] += 1;
 
     const newMatriz = [...plam.matriz];
-    for (let i = 1; i <= 5; i++) {
-      newMatriz[dim][i].push("");
-    }
-    for (let i = 6; i <= 10; i++) {
-      newMatriz[dim][i].push(0);
-    }
+      newMatriz[dim][1].push("");
+    
+    
 
     setPlam({ matriz: newMatriz, dinamicos: newDinamicos });
     
@@ -120,7 +117,7 @@ useEffect(() => {
         <button className="App-button">Atras</button>
       </Link>
 
-      <h2>Tablaaaaaaa</h2>
+      <h2>Tabla</h2>
       <h2>{infoLocal.facultad}</h2>
       <h2>{infoLocal.carrera}</h2>
       <h2>{infoLocal.area}</h2>
@@ -130,7 +127,8 @@ useEffect(() => {
         <thead>
           <tr>
             {plam.matriz[0].map((title, index) => (
-              <th key={index}>{title}</th>
+              <th key={index}>{title}
+              </th>
             ))}
           </tr>
         </thead>
