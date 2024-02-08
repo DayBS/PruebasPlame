@@ -28,9 +28,12 @@ const Tabla = () => {
     newDinamicos[dim] += 1;
 
     const newMatriz = [...plam.matriz];
-      newMatriz[dim][1].push("");
-    
-    
+    for (let i = 1; i <= 5; i++) {
+      newMatriz[dim][i].push("");
+    }
+    for (let i = 6; i <= 10; i++) {
+      newMatriz[dim][i].push(0);
+    }
 
     setPlam({ matriz: newMatriz, dinamicos: newDinamicos });
     

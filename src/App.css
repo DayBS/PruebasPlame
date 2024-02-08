@@ -5,7 +5,7 @@ body, html {
 
 .App {
   text-align: center;
-  background: #F4F4F4;
+  background: #d8d8d8;
   width: 80%;
   margin: 0 auto;
 
@@ -20,7 +20,7 @@ body, html {
 }
 
 .App-header {
-  background-color: #F4F4F4;
+  background-color: #d8d8d8;
   padding: 20px;
   color: black;
   text-align: center;
@@ -43,7 +43,7 @@ body, html {
   border-color: #DB3A34;
 }
 .AppWithBackground {
-  background: #F4F4F4; 
+  background: #d8d8d8; 
   display: flex;
   justify-content: center;
   align-items: center;
