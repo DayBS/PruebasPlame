@@ -46,7 +46,7 @@ function App() {
                           <button className="App-button">Editor<br/>(Podra llenar matrices, se necesita cuenta)</button>
                         </Link>
                         <div className='cuadrosContacto'>
-                          **Para solicitar una cuenta, por favor contactarse con la unidad responsable.
+                          **Para acceder como editor, por favor contactarse con la unidad responsable.
                         </div>
                       </div>
                     )}

@@ -82,19 +82,10 @@ const DropdownsDinamicos = () => {
         
       } else {
       console.log('Por favor, complete todas las selecciones.');
-    }}     loadJsonFile('seleccion.json');
+    }}     
     // Example usage
   };
   
-  const loadJsonFile = async (filename) => {
-    try {
-      const response = await fetch(filename);
-      const data = await response.json();
-      console.log(data); // Handle loaded JSON data here
-    } catch (error) {
-      console.error('Error loading JSON file:', error);
-    }
-  };
   
   return (
     <div>
@@ -153,9 +144,7 @@ const DropdownsDinamicos = () => {
 >
   Llenar
 </button>
-<button className="Load-button" onClick={loadJsonFile}>
-        Load JSON
-      </button>
+
 <br></br>
     </div>
   );

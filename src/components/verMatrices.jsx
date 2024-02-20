@@ -90,9 +90,7 @@ const VerMatrices = ({ onToggle }) => {
           </option>
         ))}
       </select>
-      <button className="Download-button" onClick={downloadJsonFile}>
-        Download JSON
-      </button>
+      
       <h2>Matriz Seleccionada</h2>
       <table>
       <thead>

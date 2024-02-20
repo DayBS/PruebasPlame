@@ -122,7 +122,7 @@ useEffect(() => {
   
   return (
     <div className='tabla'>
-      <Link to="/">
+      <Link to="/seleccionMatriz">
         <button className="App-button">Atras</button>
       </Link>
 

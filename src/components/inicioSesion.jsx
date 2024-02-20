@@ -5,18 +5,20 @@ import { Link } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
 import logo from '../logo.png';
 
+
 const LoginForm = () => {
-  const [username, setUsername] = useState('usuario');
-  const [password, setPassword] = useState('contra');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    if (username === 'usuario' && password === 'contra') {
+    if (username === 'Administrador' && password === '#.DUEA24.') {
       // Redirigir a la página de dashboard si las credenciales son correctas
       navigate('/seleccionMatriz');
     } else {
-      console.log('Credenciales incorrectas');
-    }
+      
+console.log('error');  
+} 
   };
 
   return (
