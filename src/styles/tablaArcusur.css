@@ -1,0 +1,50 @@
+/* tabla.css */
+
+.tabla{
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+table, th, td {
+    border:1px solid black;
+    border-spacing: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+table {
+    border:0;
+  }
+  .table-head{
+    align-items: center;
+    height: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+  .table-side{
+    align-items: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    width: 30px;
+    align-content: center;
+  }
+  .cuadrosTexto{
+    border-radius: 15px;
+    background-color: #6D869A;
+    padding: 15px;
+    width: 400px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  
+  
+  }

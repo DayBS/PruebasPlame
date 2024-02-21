@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/tabla.css';
+import '../styles/tablaArcusur.css';
+import Swal from 'sweetalert2'
+import rmbtn from '../rmbtn.png';
+import addbtn from '../addbtn.jpg';
 
 const Tabla = () => {
   const [plam, setPlam] = useState({
     matriz: [
-      ["DIMENSIÓN", "OBJETIVO", "PRODUCTO", "ACTIVIDADES", "INDICADOR", "VALIDEZ INDICADOR", "RESULTADO ALCANZADO", "COSTO ESPERADO", "COSTO ALCANZADO", "TIEMPO ESPERADO", "TIEMPO ALCANZADO"],
+      ["DIMENSIÓN", "OBJETIVO", "PRODUCTO", "ACTIVIDADES", "INDICADOR", "VALIDEZ INDICADOR", "RESULTADO ESPERADO", "RESULTADO ALCANZADO (Carrera)","RESULTADO ALCANZADO (DUEA)", "COSTO ESPERADO", "COSTO ALCANZADO", "TIEMPO ESPERADO", "TIEMPO ALCANZADO"],
       ["CONTEXTO INSTITUCIONAL", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
       ["PROYECTO ACADÉMICO", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
       ["COMUNIDAD UNIVERSITARIA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
@@ -104,7 +107,12 @@ const Tabla = () => {
       setData((prevData) => [...prevData, seleccion]);
     }
   
-    
+    Swal.fire({
+      icon: "success",
+      title: "Su trabajo se guardo exitosamente",
+      showConfirmButton: false,
+      timer: 1500
+    });
 };
 
 useEffect(() => {
@@ -119,11 +127,12 @@ useEffect(() => {
       <Link to="/seleccionMatriz">
         <button className="App-button">Atras</button>
       </Link>
-
-      <h2>Tabla</h2>
-      <h2>{infoLocal.facultad}</h2>
-      <h2>{infoLocal.carrera}</h2>
-      <h2>{infoLocal.area}</h2>
+      <div className='cuadrosTexto'>
+          <h2>Matriz de Calidad</h2>
+          <h2>{infoLocal.facultad}</h2>
+          <h2>{infoLocal.carrera}</h2>
+          <h2>{infoLocal.area}</h2>
+      </div>
       <button className="App-button" onClick={setLocalStorage}>Confirmar</button>
 
       <table>
@@ -142,12 +151,12 @@ useEffect(() => {
                 <th rowSpan={plam.dinamicos[1]} style={{ backgroundColor: '#C6E5B1' }}>
                   {plam.dinamicos[1] > 1 && (
                     <button onClick={() => subtractObj(1)}>
-                      <img src="/rmbtn.png" alt="removearea" height="15" width="15" />
+                      <img src={rmbtn} alt="removearea" height="8" width="20" style={{ backgroundColor: 'transparent' }}/>
                     </button>
                   )}
                   <h3>{plam.matriz[1][0]}</h3>
                   <button onClick={() => addObj(1)}>
-                    <img src="/addbtn.png" alt="addarea" width="15" height="15" />
+                  <img src={addbtn} alt="addarea" width="20" height="20" style={{ backgroundColor: 'transparent' }}/>
                   </button>
                 </th>
               )}
@@ -176,6 +185,18 @@ useEffect(() => {
                     }}
                   />
                 </td>
+              ))} {range(2).map((colIndex) => (
+                <td key={colIndex}>
+                  <input
+                    type="number"
+                    value={plam.matriz[1][colIndex + 6][rowIndex]}
+                    onChange={(e) => {
+                      const newMatriz = [...plam.matriz];
+                      newMatriz[1][colIndex + 6][rowIndex] = e.target.value;
+                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
+                    }}
+                  />
+                </td>
               ))}
             </tr>
           ))}
@@ -185,12 +206,12 @@ useEffect(() => {
                 <th rowSpan={plam.dinamicos[2]} style={{ backgroundColor: '#C6E5B1' }}>
                   {plam.dinamicos[2] > 1 && (
                     <button onClick={() => subtractObj(2)}>
-                      <img src="/rmbtn.png" alt="removearea" height="15" width="15" />
+                      <img src={rmbtn} alt="removearea" height="8" width="20" style={{ backgroundColor: 'transparent' }}/>
                     </button>
                   )}
                   <h3>{plam.matriz[2][0]}</h3>
                   <button onClick={() => addObj(2)}>
-                    <img src="/addbtn.png" alt="addarea" width="15" height="15" />
+                  <img src={addbtn} alt="addarea" width="20" height="20" style={{ backgroundColor: 'transparent' }}/>
                   </button>
                 </th>
               )}
@@ -219,6 +240,18 @@ useEffect(() => {
                     }}
                   />
                 </td>
+              ))}{range(2).map((colIndex) => (
+                <td key={colIndex}>
+                  <input
+                    type="number"
+                    value={plam.matriz[1][colIndex + 6][rowIndex]}
+                    onChange={(e) => {
+                      const newMatriz = [...plam.matriz];
+                      newMatriz[1][colIndex + 6][rowIndex] = e.target.value;
+                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
+                    }}
+                  />
+                </td>
               ))}
             </tr>
           ))}
@@ -228,12 +261,12 @@ useEffect(() => {
                 <th rowSpan={plam.dinamicos[3]} style={{ backgroundColor: '#C6E5B1' }}>
                   {plam.dinamicos[3] > 1 && (
                     <button onClick={() => subtractObj(3)}>
-                      <img src="/rmbtn.png" alt="removearea" height="15" width="15" />
+                      <img src={rmbtn} alt="removearea" height="8" width="20" style={{ backgroundColor: 'transparent' }}/>
                     </button>
                   )}
                   <h3>{plam.matriz[3][0]}</h3>
                   <button onClick={() => addObj(3)}>
-                    <img src="/addbtn.png" alt="addarea" width="15" height="15" />
+                  <img src={addbtn} alt="addarea" width="20" height="20" style={{ backgroundColor: 'transparent' }}/>
                   </button>
                 </th>
               )}
@@ -262,6 +295,18 @@ useEffect(() => {
                     }}
                   />
                 </td>
+              ))}{range(2).map((colIndex) => (
+                <td key={colIndex}>
+                  <input
+                    type="number"
+                    value={plam.matriz[1][colIndex + 6][rowIndex]}
+                    onChange={(e) => {
+                      const newMatriz = [...plam.matriz];
+                      newMatriz[1][colIndex + 6][rowIndex] = e.target.value;
+                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
+                    }}
+                  />
+                </td>
               ))}
             </tr>
           ))}
@@ -271,12 +316,12 @@ useEffect(() => {
                 <th rowSpan={plam.dinamicos[4]} style={{ backgroundColor: '#C6E5B1' }}>
                   {plam.dinamicos[4] > 1 && (
                     <button onClick={() => subtractObj(4)}>
-                      <img src="/rmbtn.png" alt="removearea" height="15" width="15" />
+                      <img src={rmbtn} alt="removearea" height="8" width="20" style={{ backgroundColor: 'transparent' }}/>
                     </button>
                   )}
                   <h3>{plam.matriz[4][0]}</h3>
                   <button onClick={() => addObj(4)}>
-                    <img src="/addbtn.png" alt="addarea" width="15" height="15" />
+                  <img src={addbtn} alt="addarea" width="20" height="20" style={{ backgroundColor: 'transparent' }}/>
                   </button>
                 </th>
               )}
@@ -301,6 +346,18 @@ useEffect(() => {
                     onChange={(e) => {
                       const newMatriz = [...plam.matriz];
                       newMatriz[4][colIndex + 6][rowIndex] = e.target.value;
+                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
+                    }}
+                  />
+                </td>
+              ))}{range(2).map((colIndex) => (
+                <td key={colIndex}>
+                  <input
+                    type="number"
+                    value={plam.matriz[1][colIndex + 6][rowIndex]}
+                    onChange={(e) => {
+                      const newMatriz = [...plam.matriz];
+                      newMatriz[1][colIndex + 6][rowIndex] = e.target.value;
                       setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
                     }}
                   />

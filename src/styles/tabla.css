@@ -3,7 +3,8 @@
 .tabla{
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100vh;    font-weight: bold;
+
 }
 
 table, th, td {
@@ -17,6 +18,8 @@ table, th, td {
     text-align: center;
     padding: 10px;
     margin: 0;
+    font-weight: bold;
+
   }
 table {
     border:0;
@@ -36,4 +39,15 @@ table {
     width: 30px;
     align-content: center;
   }
+  .cuadrosTexto{
+    border-radius: 15px;
+    background-color: #6D869A;
+    padding: 15px;
+    width: 10px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
   
+  
+  }

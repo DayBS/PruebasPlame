@@ -4,6 +4,7 @@ import estilos from '../styles/login.css'
 import { Link } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
 import logo from '../logo.png';
+import Swal from 'sweetalert2'
 
 
 const LoginForm = () => {
@@ -17,8 +18,13 @@ const LoginForm = () => {
       navigate('/seleccionMatriz');
     } else {
       
-console.log('error');  
-} 
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Credenciales incorrectas!",
+        footer: 'Por favor revisa e inténtalo de nuevo'
+      });
+    } 
   };
 
   return (

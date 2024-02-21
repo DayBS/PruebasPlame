@@ -1,8 +1,8 @@
 version: 1.1.3
 files:
   - url: YourAppName-Windows-1.1.3-Setup.exe
-    sha512: tOsVu/Tu39eDA38wjKww/sbPq69wNDPSA3oVv+lhve+jpCWMIGfF545LqmeojtPDucsGX40tMIbA1ttxd0LWjw==
-    size: 62037317
+    sha512: Cthmr3t4Zl52Gt73Zp/tc5hFqHIMBkoS9cgXtkmDsDF+I4y4fiKvpVBk6P19AdgmW8gBg+eZhDbT8IKpj42AGA==
+    size: 62143596
 path: YourAppName-Windows-1.1.3-Setup.exe
-sha512: tOsVu/Tu39eDA38wjKww/sbPq69wNDPSA3oVv+lhve+jpCWMIGfF545LqmeojtPDucsGX40tMIbA1ttxd0LWjw==
-releaseDate: '2024-02-16T13:46:54.975Z'
+sha512: Cthmr3t4Zl52Gt73Zp/tc5hFqHIMBkoS9cgXtkmDsDF+I4y4fiKvpVBk6P19AdgmW8gBg+eZhDbT8IKpj42AGA==
+releaseDate: '2024-02-21T15:48:58.349Z'
