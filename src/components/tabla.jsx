@@ -11,16 +11,16 @@ const Tabla = () => {
   const [plam, setPlam] = useState({
     matriz: [
       ["DIMENSIÓN", "OBJETIVO", "PRODUCTO", "ACTIVIDADES", "INDICADOR", "VALIDEZ INDICADOR", "RESULTADO ESPERADO", "RESULTADO ALCANZADO (Carrera)","RESULTADO ALCANZADO (DUEA)", "COSTO ESPERADO", "COSTO ALCANZADO", "TIEMPO ESPERADO", "TIEMPO ALCANZADO"],
-      ["NORMAS JURÍDICAS INSTITUCIONALES", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["MISIÓN Y OBJETIVO", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["CURRÍCULO", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["ADMINISTRACIÓN Y GESTIÓN ACADÉMICA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["DOCENTES", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["ESTUDIANTES", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["INVESTIGACIÓN E INTERACCIÓN SOCIAL", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["RECURSOS EDUCATIVOS", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["ADMINISTRATIVOS FINANCIEROS", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["INFRAESTRUCTURA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]]
+      ["NORMAS JURÍDICAS INSTITUCIONALES", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["MISIÓN Y OBJETIVO", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["CURRÍCULO", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["ADMINISTRACIÓN Y GESTIÓN ACADÉMICA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["DOCENTES", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["ESTUDIANTES", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["INVESTIGACIÓN E INTERACCIÓN SOCIAL", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["RECURSOS EDUCATIVOS", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["ADMINISTRATIVOS FINANCIEROS", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["INFRAESTRUCTURA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]]
     ],
     dinamicos: Array.from({ length: 13 }, () => 1)
   });

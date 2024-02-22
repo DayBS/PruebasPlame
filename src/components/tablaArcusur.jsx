@@ -9,10 +9,10 @@ const Tabla = () => {
   const [plam, setPlam] = useState({
     matriz: [
       ["DIMENSIÓN", "OBJETIVO", "PRODUCTO", "ACTIVIDADES", "INDICADOR", "VALIDEZ INDICADOR", "RESULTADO ESPERADO", "RESULTADO ALCANZADO (Carrera)","RESULTADO ALCANZADO (DUEA)", "COSTO ESPERADO", "COSTO ALCANZADO", "TIEMPO ESPERADO", "TIEMPO ALCANZADO"],
-      ["CONTEXTO INSTITUCIONAL", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["PROYECTO ACADÉMICO", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["COMUNIDAD UNIVERSITARIA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]],
-      ["INFRAESTRUCTURA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0]]
+      ["CONTEXTO INSTITUCIONAL", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["PROYECTO ACADÉMICO", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["COMUNIDAD UNIVERSITARIA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
+      ["INFRAESTRUCTURA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]]
     ],
     dinamicos: Array.from({ length: 5 }, () => 1)
   });
