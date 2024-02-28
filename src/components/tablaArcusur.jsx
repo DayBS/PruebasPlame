@@ -34,7 +34,7 @@ const Tabla = () => {
     for (let i = 1; i <= 5; i++) {
       newMatriz[dim][i].push("");
     }
-    for (let i = 6; i <= 10; i++) {
+    for (let i = 6; i <= 12; i++) {
       newMatriz[dim][i].push(0);
     }
 
@@ -47,7 +47,7 @@ const Tabla = () => {
     newDinamicos[dim] -= 1;
 
     const newMatriz = [...plam.matriz];
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 12; i++) {
       newMatriz[dim][i].pop();
     }
 

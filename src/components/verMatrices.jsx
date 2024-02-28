@@ -95,7 +95,7 @@ const VerMatrices = ({ onToggle }) => {
       <table>
       <thead>
         <tr>
-          {selectedMatriz[0] && selectedMatriz[0].slice(0, 6).map((header, index) => (
+          {selectedMatriz[0] && selectedMatriz[0].slice(0, 5).map((header, index) => (
             <th key={index}>{header}</th>
           ))}
         </tr>
@@ -111,7 +111,7 @@ const VerMatrices = ({ onToggle }) => {
                   <h3>{selectedMatriz[1][0]}</h3>
                 </th>
               )}
-              {range(5).map((colIndex) => (
+              {range(4).map((colIndex) => (
                 <td key={colIndex}>{selectedMatriz[1][colIndex+1][rowIndex]}</td>
               ))}
               
@@ -126,7 +126,7 @@ const VerMatrices = ({ onToggle }) => {
                   <h3>{selectedMatriz[2][0]}</h3>
                 </th>
               )}
-              {range(5).map((colIndex) => (
+              {range(4).map((colIndex) => (
                 <td key={colIndex}>{selectedMatriz[2][colIndex+1][rowIndex]}</td>
               ))}
               
@@ -140,7 +140,7 @@ const VerMatrices = ({ onToggle }) => {
                   <h3>{selectedMatriz[3][0]}</h3>
                 </th>
               )}
-              {range(5).map((colIndex) => (
+              {range(4).map((colIndex) => (
                 <td key={colIndex}>{selectedMatriz[3][colIndex+1][rowIndex]}</td>
               ))}
               
@@ -154,7 +154,7 @@ const VerMatrices = ({ onToggle }) => {
                   <h3>{selectedMatriz[4][0]}</h3>
                 </th>
               )}
-              {range(5).map((colIndex) => (
+              {range(4).map((colIndex) => (
                 <td key={colIndex}>{selectedMatriz[4][colIndex+1][rowIndex]}</td>
               ))}
               
@@ -168,7 +168,7 @@ const VerMatrices = ({ onToggle }) => {
                   <h3>{selectedMatriz[5][0]}</h3>
                 </th>
               )}
-              {range(5).map((colIndex) => (
+              {range(4).map((colIndex) => (
                 <td key={colIndex}>{selectedMatriz[5][colIndex+1][rowIndex]}</td>
               ))}
               
@@ -182,7 +182,7 @@ const VerMatrices = ({ onToggle }) => {
                   <h3>{selectedMatriz[6][0]}</h3>
                 </th>
               )}
-              {range(5).map((colIndex) => (
+              {range(4).map((colIndex) => (
                 <td key={colIndex}>{selectedMatriz[6][colIndex+1][rowIndex]}</td>
               ))}
               
@@ -196,7 +196,7 @@ const VerMatrices = ({ onToggle }) => {
                   <h3>{selectedMatriz[7][0]}</h3>
                 </th>
               )}
-              {range(5).map((colIndex) => (
+              {range(4).map((colIndex) => (
                 <td key={colIndex}>{selectedMatriz[7][colIndex+1][rowIndex]}</td>
               ))}
               
@@ -210,7 +210,7 @@ const VerMatrices = ({ onToggle }) => {
                   <h3>{selectedMatriz[8][0]}</h3>
                 </th>
               )}
-              {range(5).map((colIndex) => (
+              {range(4).map((colIndex) => (
                 <td key={colIndex}>{selectedMatriz[8][colIndex+1][rowIndex]}</td>
               ))}
               
@@ -224,26 +224,13 @@ const VerMatrices = ({ onToggle }) => {
                   <h3>{selectedMatriz[9][0]}</h3>
                 </th>
               )}
-              {range(5).map((colIndex) => (
+              {range(4).map((colIndex) => (
                 <td key={colIndex}>{selectedMatriz[9][colIndex+1][rowIndex]}</td>
               ))}
               
             </tr>
           ))}
 
-{selectedMatriz[10] && range(selectedMatriz[10][1].length).map((rowIndex) => (
-            <tr key={rowIndex}>
-              {rowIndex === 0 && selectedMatriz[10] && selectedMatriz[10][0] && (
-                <th rowSpan={dinamicos[10]} style={{ backgroundColor: '#C6E5B1' }}>
-                  <h3>{selectedMatriz[10][0]}</h3>
-                </th>
-              )}
-              {range(5).map((colIndex) => (
-                <td key={colIndex}>{selectedMatriz[10][colIndex+1][rowIndex]}</td>
-              ))}
-              
-            </tr>
-          ))}
         </tbody>
       </table>
 
