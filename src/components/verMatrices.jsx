@@ -49,31 +49,7 @@ const VerMatrices = ({ onToggle }) => {
     setDinamicos(selectedDinamicos);
   }, [selectedCarrera, listaCarreras]);
   
-  const downloadJsonFile = () => {
-    const seleccion = JSON.parse(localStorage.getItem('seleccion'));
   
-    if (seleccion) {
-      const jsonData = JSON.stringify(seleccion, null, 2);
-  
-      const blob = new Blob([jsonData], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-  
-      // Specify a file path for Electron (e.g., app.getPath('documents') for the Documents folder)
-      const filePath = 'path/to/your/preferred/location/seleccion.json';
-  
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = filePath.split('/').pop(); // Extracts the file name from the path
-  
-      document.body.appendChild(a);
-      a.click();
-  
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } else {
-      console.log('No data available to download.');
-    }
-  };
   
 
   return(

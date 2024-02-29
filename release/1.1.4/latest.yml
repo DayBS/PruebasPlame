@@ -1,0 +1,8 @@
+version: 1.1.4
+files:
+  - url: YourAppName-Windows-1.1.4-Setup.exe
+    sha512: /3uC27E20esVEBDNLH4+nE/VdyXvZoyScfDbmaMN9rsPmZy8exMgiSDfr6uXbAIeyIomHHRMhoOiHiRU8YlwgA==
+    size: 64179821
+path: YourAppName-Windows-1.1.4-Setup.exe
+sha512: /3uC27E20esVEBDNLH4+nE/VdyXvZoyScfDbmaMN9rsPmZy8exMgiSDfr6uXbAIeyIomHHRMhoOiHiRU8YlwgA==
+releaseDate: '2024-02-29T15:53:11.816Z'

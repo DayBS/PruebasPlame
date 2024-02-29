@@ -5,7 +5,14 @@ import Swal from 'sweetalert2'
 import rmbtn from '../rmbtn.png';
 import addbtn from '../addbtn.jpg';
 import logo from '../logo.png';
+import * as XLSX from 'xlsx';
 
+function exportToExcel(data, filename) {
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+    XLSX.writeFile(wb, `${filename}.xlsx`);
+}
 
 const Tabla = () => {
   const [plam, setPlam] = useState({
@@ -22,9 +29,12 @@ const Tabla = () => {
       ["ADMINISTRATIVOS FINANCIEROS", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]],
       ["INFRAESTRUCTURA", [""], [""], [""], [""], [""], [0], [0], [0], [0], [0], [0], [0]]
     ],
-    dinamicos: Array.from({ length: 13 }, () => 1)
+    dinamicos: Array.from({ length: 11 }, () => 1)
   });
 
+  const handleExportButtonClick = () => {
+    exportToExcel(plam.matriz, "table_export");
+};
   const [infoLocal, setInfoLocal] = useState({
     facultad: '',
     carrera: '',
@@ -144,7 +154,8 @@ useEffect(() => {
           <h2>{infoLocal.area}</h2>
       </div>
           <button className="App-button" onClick={setLocalStorage}>Confirmar</button>
-      
+          
+          <button className="App-button" onClick={handleExportButtonClick}>excel</button>
       <table>
         <thead>
           <tr>
@@ -182,7 +193,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
@@ -190,18 +201,6 @@ useEffect(() => {
                     onChange={(e) => {
                       const newMatriz = [...plam.matriz];
                       newMatriz[1][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[7][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[7][colIndex + 6][rowIndex] = e.target.value;
                       setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
                     }}
                   />
@@ -237,7 +236,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
@@ -245,18 +244,6 @@ useEffect(() => {
                     onChange={(e) => {
                       const newMatriz = [...plam.matriz];
                       newMatriz[2][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[7][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[7][colIndex + 6][rowIndex] = e.target.value;
                       setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
                     }}
                   />
@@ -292,7 +279,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
@@ -300,18 +287,6 @@ useEffect(() => {
                     onChange={(e) => {
                       const newMatriz = [...plam.matriz];
                       newMatriz[3][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[7][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[7][colIndex + 6][rowIndex] = e.target.value;
                       setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
                     }}
                   />
@@ -347,7 +322,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
@@ -355,18 +330,6 @@ useEffect(() => {
                     onChange={(e) => {
                       const newMatriz = [...plam.matriz];
                       newMatriz[4][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[7][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[7][colIndex + 6][rowIndex] = e.target.value;
                       setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
                     }}
                   />
@@ -402,7 +365,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
@@ -410,18 +373,6 @@ useEffect(() => {
                     onChange={(e) => {
                       const newMatriz = [...plam.matriz];
                       newMatriz[5][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[7][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[7][colIndex + 6][rowIndex] = e.target.value;
                       setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
                     }}
                   />
@@ -457,7 +408,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
@@ -465,18 +416,6 @@ useEffect(() => {
                     onChange={(e) => {
                       const newMatriz = [...plam.matriz];
                       newMatriz[6][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[7][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[7][colIndex + 6][rowIndex] = e.target.value;
                       setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
                     }}
                   />
@@ -512,19 +451,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[7][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[7][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
@@ -567,7 +494,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
@@ -575,18 +502,6 @@ useEffect(() => {
                     onChange={(e) => {
                       const newMatriz = [...plam.matriz];
                       newMatriz[8][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[9][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[9][colIndex + 6][rowIndex] = e.target.value;
                       setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
                     }}
                   />
@@ -622,19 +537,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[9][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[9][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
@@ -677,19 +580,7 @@ useEffect(() => {
                   />
                 </td>
               ))}
-              {range(5).map((colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="number"
-                    value={plam.matriz[10][colIndex + 6][rowIndex]}
-                    onChange={(e) => {
-                      const newMatriz = [...plam.matriz];
-                      newMatriz[10][colIndex + 6][rowIndex] = e.target.value;
-                      setPlam({ matriz: newMatriz, dinamicos: plam.dinamicos });
-                    }}
-                  />
-                </td>
-              ))}{range(2).map((colIndex) => (
+              {range(7).map((colIndex) => (
                 <td key={colIndex}>
                   <input
                     type="number"
